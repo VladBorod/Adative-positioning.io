@@ -1,0 +1,332 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* MAIN --------------------------- */
+
+body {
+    /* width: 1140px; */
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+
+/* HEADER ------------------------- */
+
+.header {
+    width: 1140px;
+    height: 75px;
+    background-color: #222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 41px;
+    /* padding-right: 1258px; */
+}
+
+.header_logo {
+    width: 44px;
+    height: 38px;
+    flex-shrink: 0;
+}
+
+.header_search_button {
+    width: 26.002px;
+    height: 26.792px;
+    flex-shrink: 0;
+    fill: #E8E8E8;
+}
+
+.header_menu_buttons {
+    width: 158.996px;
+    height: 29px;
+    flex-shrink: 0;
+    fill: #E8E8E8;
+}
+
+
+/* BRAND ------------------------ */
+
+.brand {
+    background-color: #F1E4E6;
+    width: 1140px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    gap: 16px;
+}
+
+.brand_text {
+    color: #222;
+    font-family: "Lato";
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    width: 377px;
+    height: 93px;
+    font-weight: 900;
+}
+
+.brand_text_luxerious {
+    color: #222;
+    font-family: "Lato";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.brand_text_fashion {
+    color: #F16D7F;
+    font-family: "Lato";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.offer {
+    width: 1140px;
+    padding-top: 65px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50% 50% 1px;
+    align-items: center;
+    align-content: space-between;
+    justify-items: start;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+}
+
+.offer_item {
+    width: 360px;
+    height: 250px;
+}
+
+.offer_item_4 {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 2;
+}
+
+.offer_front_img_123 {
+    width: 360px;
+    height: 260px;
+    position: absolute;
+}
+
+.offer_back_img_123 {
+    width: 360px;
+    height: 260px;
+    position: absolute;
+}
+
+.offer_front_img_4 {
+    width: 1140px;
+    height: 180px;
+    position: absolute;
+}
+
+.offer_back_img_4 {
+    width: 1140px;
+    height: 180px;
+    position: absolute;
+}
+
+.offer_typography {
+    width: 154px;
+    height: 50px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lato";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+    align-items: stretch;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.offer_typography_4 {
+    width: 159.72px;
+    height: 50px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lato";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    margin-left: 491px;
+    margin-right: auto;
+    margin-bottom: 65px;
+}
+
+.offer_main_text {
+    color: #F16D7F;
+    font-family: "Lato";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* position: relative; */
+}
+
+.product_logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.product_logo_representation {
+    padding-top: 96px;
+    color: #222;
+    font-family: "Lato";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product_logo_representation_paraph {
+    color: #9F9F9F;
+    font-family: "Lato";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.product {
+    padding-top: 47px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product_item {
+    width: 360px;
+    height: 581px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.product_img {
+    width: 360px;
+    height: 420px;
+    flex-shrink: 0;
+}
+
+.product_img_special_layer {
+    width: 360px;
+    height: 420px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.product_img_special {
+    flex-shrink: 0;
+    position: absolute;
+}
+
+.product_h4 {
+    color: #000;
+    font-family: "Lato";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+}
+
+.product_paraph {
+    color: #5D5D5D;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-left: 16px;
+}
+
+.product_price {
+    color: #F16D7F;
+    font-family: "Lato";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 16px;
+}
+
+.browse_button {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.browse_button_rectangle {
+    width: 212px;
+    height: 48px;
+    background-color: #FFF;
+    border-color: #F26376;
+    /* border: #F26376; */
+    box-shadow: none;
+}
+
+.browse_button_text {
+    color: #F26376;
+    font-family: "Lato";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
