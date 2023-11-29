@@ -81,10 +81,29 @@ body {
 .header_menu_buttons {
     display: -webkit-box;
     display: -ms-flexbox;
-    width: 158.996px;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 33px;
+}
+
+.header_menu_lines {
+    width: 32px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.header_menu_person {
+    width: 29px;
     height: 29px;
     flex-shrink: 0;
-    fill: #E8E8E8;
+}
+
+.header_menu_backet {
+    width: 31.996px;
+    height: 29px;
+    flex-shrink: 0;
 }
 
 
@@ -107,6 +126,8 @@ body {
 
 .brand_man_img {
     width: 50%;
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
 }
 
 .brand_text {
@@ -140,11 +161,10 @@ body {
 /* OFFER -------------------- */
 
 .offer {
-    width: 1140px;
     padding-top: 65px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50% 50% 1px;
+    grid-template-rows: 260px 180px;
     align-items: center;
     align-content: space-between;
     justify-items: start;
@@ -165,29 +185,21 @@ body {
 .offer_front_img_123 {
     width: 360px;
     height: 260px;
-    /* width: 100%;
-    height: 100%; */
     position: absolute;
 }
 
 .offer_back_img_123 {
     width: 360px;
     height: 260px;
-    /* width: 100%;
-    height: 100%; */
     position: absolute;
 }
 
 .offer_front_img_4 {
-    /* width: 1140px; */
-    /* height: 180px; */
     min-height: 180px;
     position: absolute;
 }
 
 .offer_back_img_4 {
-    /* width: 1140px; */
-    /* height: 180px;   */
     min-height: 180px;
     position: absolute;
 }
@@ -212,6 +224,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
+    position: relative;
 }
 
 .offer_typography_4 {
@@ -228,6 +241,7 @@ body {
     margin-left: 491px;
     margin-right: auto;
     margin-bottom: 65px;
+    position: relative;
 }
 
 .offer_main_text {
@@ -237,10 +251,10 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    /* position: relative; */
 }
 
 .product_logo {
+    padding-top: 96px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -250,7 +264,7 @@ body {
 }
 
 .product_logo_representation {
-    padding-top: 96px;
+    /* padding-top: 96px; */
     color: #222;
     font-family: "Lato";
     font-size: 20px;
@@ -279,6 +293,7 @@ body {
 }
 
 .product_item {
+    padding-bottom: 20px;
     width: 360px;
     height: 581px;
     display: flex;
@@ -287,6 +302,7 @@ body {
     justify-content: space-evenly;
     align-content: stretch;
     flex-wrap: wrap;
+    fill: #F8F8F8;
 }
 
 .product_img {
@@ -320,7 +336,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    padding-left: 16px;
 }
 
 .product_paraph {
@@ -330,7 +347,8 @@ body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    padding-left: 16px;
 }
 
 .product_price {
@@ -340,7 +358,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 16px;
+    /* margin-left: 16px; */
+    padding-left: 16px;
 }
 
 .browse_button {
@@ -353,15 +372,38 @@ body {
     flex-wrap: nowrap;
 }
 
+.new_button_browse {
+    padding: 15px 39px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F26376;
+    background-color: #FFF;
+    border: 2px solid #FF6A6A;
+}
+
+
+/* .browse_button {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
 .browse_button_rectangle {
     width: 212px;
     height: 48px;
     background-color: #FFF;
     border-color: #F26376;
     /* border: #F26376; */
-    box-shadow: none;
-}
 
+
+/* 
+box-shadow: none;
+
+}
 .browse_button_text {
     color: #F26376;
     font-family: "Lato";
@@ -370,3 +412,4 @@ body {
     font-weight: 400;
     line-height: normal;
 }
+*/
