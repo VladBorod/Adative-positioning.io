@@ -241,10 +241,10 @@
                     justify-content: center;
                 }
                 
-                .product_logo_representation {
+                .product_logo h1 {
                     color: #222;
                     font-family: "Lato";
-                    font-size: 20px;
+                    font-size: 36px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
@@ -253,7 +253,7 @@
                     align-items: center;
                 }
                 
-                .product_logo_representation_paraph {
+                .product_logo p {
                     color: #9F9F9F;
                     font-family: "Lato";
                     font-size: 14px;
@@ -266,6 +266,7 @@
                     padding-top: 47px;
                     gap: 30px;
                     display: grid;
+                    justify-content: center;
                     grid-template-columns: repeat(auto-fit, 360px);
                 }
                 
@@ -279,12 +280,11 @@
                     justify-content: space-evenly;
                     align-content: stretch;
                     flex-wrap: wrap;
-                    fill: #F8F8F8;
+                    background: #F8F8F8;
                 }
                 
                 .product_img {
                     width: 360px;
-                    height: 420px;
                     flex-shrink: 0;
                 }
                 
