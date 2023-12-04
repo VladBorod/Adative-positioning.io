@@ -107,8 +107,6 @@
                     display: -webkit-box;
                     display: -ms-flexbox;
                     background-color: #F1E4E6;
-                    /* padding-left: calc(50% - 800px);
-                    padding-right: calc(50% - 800px); */
                     display: flex;
                     flex-direction: row;
                     flex-wrap: nowrap;
@@ -120,8 +118,6 @@
                 
                 .brand_man_img {
                     width: 50%;
-                    /* padding-left: calc(50% - 800px);
-                    padding-right: calc(50% - 800px); */
                 }
                 
                 .brand_text {
@@ -734,36 +730,33 @@
                     }
                     .offer {
                         padding-top: 65px;
-                        display: grid;
-                        grid-template-columns: 80px 468px 80px;
-                        grid-template-rows: repeat(3, 344px) 81px;
-                        gap: 19.9px;
+                        display: flex;
+                        gap: 35px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
                     }
                     .offer_item {
-                        grid-column: span 1/3;
                         position: relative;
                         background: rgba(33, 22, 22, 0.7);
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
+                        min-width: 450px;
                     }
                     .offer_item_big {
-                        grid-column: span 1/3;
                         position: relative;
                         background: rgba(33, 22, 22, 0.7);
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: center;
                         align-items: center;
-                    }
-                    .offer_item_big img {
-                        width: 100%;
-                        z-index: -1;
+                        min-width: 450px;
                     }
                     .product {
                         padding-top: 47px;
-                        gap: 0px;
+                        gap: 16.61px;
                         display: grid;
                         grid-template-columns: repeat(auto-fit, 360px);
                     }
@@ -777,4 +770,291 @@
                         flex-wrap: nowrap;
                     }
                 }
-                /* 9 SEM 16 MIN */
+                
+                @media (max-width: 468px) {
+                    .center {
+                        padding-left: calc(50% - 234px);
+                        padding-right: calc(50% - 234px);
+                    }
+                    .header_menu_person-site {
+                        display: none;
+                    }
+                    .header_menu_backet-site {
+                        display: none;
+                    }
+                    .brand {
+                        min-height: 400px;
+                    }
+                    .brand_rectangle {
+                        width: 10px;
+                        padding-left: 4px;
+                    }
+                    .brand_text {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 42px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 42px;
+                        min-width: 260px;
+                        min-height: 80px;
+                    }
+                    .brand_text_luxerious {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_text_fashion {
+                        color: #F16D7F;
+                        font-family: "Lato";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_man_img {
+                        display: none;
+                    }
+                    .offer {
+                        padding-top: 65px;
+                        display: flex;
+                        gap: 34px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    }
+                    .offer_item {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 380px;
+                    }
+                    .offer_item_big {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 380px;
+                    }
+                    .product {
+                        padding-top: 47px;
+                        gap: 16.61px;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, 360px);
+                    }
+                    .browse_button {
+                        padding-top: 32px;
+                        padding-bottom: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: nowrap;
+                    }
+                }
+                
+                @media (max-width: 398px) {
+                    .center {
+                        padding-left: calc(50% - 199px);
+                        padding-right: calc(50% - 199px);
+                    }
+                    .header {
+                        min-height: 74px;
+                    }
+                    .header__left {
+                        display: flex;
+                        align-items: center;
+                        gap: 41px;
+                        padding-left: 16px;
+                    }
+                    .header_menu_buttons {
+                        padding-right: 16px;
+                    }
+                    .brand {
+                        min-height: 363px;
+                    }
+                    .brand_rectangle {
+                        width: 10px;
+                        padding-left: 5px;
+                        padding-bottom: 14px;
+                        max-height: 66px;
+                    }
+                    .brand_text {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 38px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 32px;
+                        min-width: 260px;
+                        min-height: 80px;
+                    }
+                    .brand_text_luxerious {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_text_fashion {
+                        color: #F16D7F;
+                        font-family: "Lato";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_man_img {
+                        display: none;
+                    }
+                    .offer {
+                        padding-top: 65px;
+                        display: flex;
+                        gap: 33px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    }
+                    .offer_item {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 360px;
+                    }
+                    .offer_item_big {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 360px;
+                    }
+                    .product {
+                        padding-top: 47px;
+                        gap: 16.61px;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, 360px);
+                    }
+                    .browse_button {
+                        padding-top: 32px;
+                        padding-bottom: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: nowrap;
+                    }
+                }
+                
+                @media (max-width: 375px) {
+                    .center {
+                        padding-left: calc(50% - 187.5px);
+                        padding-right: calc(50% - 187.5px);
+                    }
+                    .header {
+                        min-height: 74px;
+                    }
+                    .header__left {
+                        display: flex;
+                        align-items: center;
+                        gap: 41px;
+                        padding-left: 16px;
+                    }
+                    .header_menu_buttons {
+                        padding-right: 16px;
+                    }
+                    .brand {
+                        min-height: 363px;
+                    }
+                    .brand_rectangle {
+                        width: 10px;
+                        padding-left: 5px;
+                        padding-bottom: 14px;
+                        max-height: 66px;
+                    }
+                    .brand_text {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 38px;
+                        font-style: normal;
+                        font-weight: 900;
+                        line-height: 32px;
+                        min-width: 260px;
+                        min-height: 80px;
+                    }
+                    .brand_text_luxerious {
+                        color: #222;
+                        font-family: "Lato";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_text_fashion {
+                        color: #F16D7F;
+                        font-family: "Lato";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 38px;
+                    }
+                    .brand_man_img {
+                        display: none;
+                    }
+                    .offer {
+                        padding-top: 65px;
+                        display: flex;
+                        gap: 32px;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-items: center;
+                    }
+                    .offer_item {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 343px;
+                        min-height: 248px;
+                    }
+                    .offer_item_big {
+                        position: relative;
+                        background: rgba(33, 22, 22, 0.7);
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 359px;
+                        min-height: 111px;
+                    }
+                    .product {
+                        padding-top: 47px;
+                        gap: 16.61px;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, 360px);
+                    }
+                    .browse_button {
+                        padding-top: 32px;
+                        padding-bottom: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: nowrap;
+                    }
+                }
