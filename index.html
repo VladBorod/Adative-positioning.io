@@ -50,7 +50,12 @@
             </div>
             <!-- 4 -->
             <div class="offer_item_big">
-                <img src="/img/offerImg4.png" alt="offer four">
+                <!-- <img src="/img/offerImg4.png" alt="offer four"> -->
+                <picture class="offer_item_big img">
+                    <source media="(max-width: 692px)" srcset="/img/offerPhoneImg4.png">
+                    <source media="(min-width: 691px)" srcset="/img/offerImg4.png">
+                    <img src="/img/offerImg4.png" alt="offer four">
+                </picture>
                 <h4>LUXIROUS & TRENDY <br><span>ACCESORIES</span></h4>
             </div>
         </main>
