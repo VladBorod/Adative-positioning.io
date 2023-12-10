@@ -658,6 +658,8 @@
                     color: #F26376;
                     transform: scale(1.4);
                     transition: 0.7s;
+                    color: red;
+                    fill: red;
                 }
                 
                 @media (max-width: 1153px) {
