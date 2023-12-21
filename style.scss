@@ -1,11 +1,18 @@
+@mixin centerflex() {
+    display: flex;
+    align-items: center;
+}
+
 $widthSite: 1140px;
+$widthNoteMiddle: 1160;
 $colorGreyMain: #222222;
 $colorPinkMain: #F16D7F;
 $colorPinkBackground: #F1E4E6;
 $colorBlackTextMain: #222;
 $colorWhiteMain: #FFF;
-$colorItemBackground: rgba(33, 22, 22, 0.7);
+$colorItemBackground: rgba(48, 37, 37, 0.7);
 $colorParagrafTextGrey: #9F9F9F;
+$fontLato: "Lato";
 * {
     padding: 0;
     margin: 0;
@@ -46,16 +53,14 @@ body {
 .header {
     min-height: 75px;
     background: $colorGreyMain;
-    display: flex;
+    @include centerflex();
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header__left {
-    display: flex;
-    align-items: center;
+    @include centerflex();
     gap: 41px;
 }
 
@@ -77,8 +82,7 @@ body {
 }
 
 .header_menu_buttons {
-    display: flex;
-    align-items: center;
+    @include centerflex();
     gap: 33px;
 }
 
@@ -110,11 +114,10 @@ body {
 
 .brand {
     background-color: $colorPinkBackground;
-    display: flex;
+    @include centerflex();
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: stretch;
-    align-items: center;
     gap: 16px;
     padding-left: calc(50% - $widthSite / 2);
     padding-right: calc(50% - $widthSite / 2);
@@ -126,7 +129,7 @@ body {
 
 .brand_text {
     color: $colorBlackTextMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 48px;
     font-style: normal;
     font-weight: 900;
@@ -135,7 +138,7 @@ body {
 
 .brand_text_luxerious {
     color: $colorBlackTextMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -144,7 +147,7 @@ body {
 
 .brand_text_fashion {
     color: $colorPinkMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -165,10 +168,9 @@ body {
 .offer_item {
     position: relative;
     background: $colorItemBackground;
-    display: flex;
+    @include centerflex();
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .offer_item:hover {
@@ -180,10 +182,9 @@ body {
     grid-column: 1 / span 3;
     position: relative;
     background: $colorItemBackground;
-    display: flex;
+    @include centerflex();
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .offer_item_big:hover {
@@ -205,7 +206,7 @@ body {
     position: absolute;
     color: $colorWhiteMain;
     text-align: center;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -216,7 +217,7 @@ body {
     position: absolute;
     color: $colorWhiteMain;
     text-align: center;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -226,7 +227,7 @@ body {
 .offer_item span {
     position: relative;
     color: $colorPinkMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -236,7 +237,7 @@ body {
 .offer_item_big span {
     position: relative;
     color: $colorPinkMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -248,29 +249,27 @@ body {
 
 .product_logo {
     padding-top: 96px;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-    align-items: center;
     justify-content: center;
 }
 
 .product_logo h1 {
     color: $colorBlackTextMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
-    align-items: center;
 }
 
 .product_logo p {
     color: $colorParagrafTextGrey;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -362,10 +361,9 @@ body {
     height: 420px;
     flex-shrink: 0;
     position: relative;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
     align-content: center;
 }
@@ -376,8 +374,8 @@ body {
 }
 
 .product_h4 {
-    color: #000;
-    font-family: "Lato";
+    color: $colorBlackTextMain;
+    font-family: $fontLato;
     font-size: 13px;
     font-style: normal;
     font-weight: 700;
@@ -389,7 +387,7 @@ body {
 
 .product_paraph {
     color: $colorParagrafTextGrey;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
@@ -400,7 +398,7 @@ body {
 
 .product_price {
     color: $colorPinkMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -415,9 +413,8 @@ body {
 .browse_button {
     padding-top: 48px;
     padding-bottom: 48px;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
 }
@@ -444,7 +441,7 @@ body {
 /* FEATURE --------------------------- */
 
 .feature {
-    background-color: #222224;
+    background-color: $colorBlackTextMain;
     max-height: 341px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 360px);
@@ -455,10 +452,9 @@ body {
 
 .feature_item {
     max-width: 360px;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding-top: 103px;
     padding-bottom: 104px;
 }
@@ -486,7 +482,7 @@ body {
 
 .feature_item h2 {
     color: $colorWhiteMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 19.96px;
     font-style: normal;
     font-weight: 400;
@@ -497,7 +493,7 @@ body {
 .feature_item p {
     color: $colorWhiteMain;
     text-align: center;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 13.972px;
     font-style: normal;
     font-weight: 300;
@@ -541,7 +537,7 @@ body {
 .bottom_left h2 {
     color: $colorGreyMain;
     text-align: center;
-    font-family: Lato;
+    font-family: $fontLato;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -550,7 +546,7 @@ body {
 
 .bottom_left span {
     color: $colorBlackTextMain;
-    font-family: Lato;
+    font-family: $fontLato;
     font-size: 20px;
     font-style: italic;
     font-weight: 400;
@@ -561,16 +557,15 @@ body {
     width: 557px;
     height: 142px;
     text-align: center;
-    display: flex;
+    @include centerflex();
     flex-direction: column;
-    align-items: center;
     flex-wrap: nowrap;
 }
 
 .bottom_right h1 {
     color: $colorBlackTextMain;
     text-align: center;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -579,7 +574,7 @@ body {
 
 .bottom_right p {
     color: $colorBlackTextMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -602,8 +597,7 @@ body {
     border: 1px;
     font-size: 14px;
     line-height: 17px;
-    display: flex;
-    align-items: center;
+    @include centerflex();
     color: $colorBlackTextMain;
     opacity: 0.67;
 }
@@ -624,8 +618,7 @@ body {
     height: 49px;
     font-size: 14px;
     line-height: 17px;
-    display: flex;
-    align-items: center;
+    @include centerflex();
     text-align: center;
     color: $colorWhiteMain;
     background: $colorPinkMain;
@@ -635,7 +628,7 @@ body {
 }
 
 .copyright {
-    background: #222224;
+    background: $colorBlackTextMain;
     display: flex;
     min-height: 79px;
     flex-direction: row;
@@ -645,7 +638,7 @@ body {
 
 .copyright_text {
     color: $colorWhiteMain;
-    font-family: "Lato";
+    font-family: $fontLato;
     font-size: 10px;
     font-style: normal;
     font-weight: 100;
@@ -665,31 +658,28 @@ body {
     transition: 0.7s;
 }
 
-@media (max-width: 1153px) {
+@media (max-width: 1154px) {
     .center {
-        padding-left: calc(50% - 510.5px);
-        padding-right: calc(50% - 510.5px);
+        padding-left: calc(50% - 577px);
+        padding-right: calc(50% - 577px);
     }
     .header__left {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 41px;
         padding-left: 32px;
     }
     .header_menu_buttons {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 25px;
         padding-right: 41px;
     }
     .brand {
-        background-color: $colorWhiteMain;
-        display: flex;
+        background-color: $colorPinkBackground;
+        @include centerflex();
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-content: stretch;
-        align-items: center;
         gap: 16px;
     }
     .brand_man_img {
@@ -697,7 +687,7 @@ body {
     }
     .brand_text {
         color: $colorBlackTextMain;
-        font-family: "Lato";
+        font-family: $fontLato;
         font-size: 46px;
         font-style: normal;
         font-weight: 900;
@@ -705,7 +695,7 @@ body {
     }
     .brand_text_luxerious {
         color: $colorBlackTextMain;
-        font-family: "Lato";
+        font-family: $fontLato;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
@@ -713,7 +703,7 @@ body {
     }
     .brand_text_fashion {
         color: $colorPinkMain;
-        font-family: Lato;
+        font-family: $fontLato;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
@@ -725,6 +715,7 @@ body {
         grid-template-columns: repeat(3, 325.973px);
         grid-template-rows: 233.973px 162.043px;
         gap: 19.9px;
+        justify-content: center;
     }
     .feature {
         background-color: $colorBlackTextMain;
@@ -741,51 +732,46 @@ body {
         padding-right: calc(50% - 462px);
     }
     .header__left {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 41px;
         padding-left: 32px;
     }
     .header_menu_buttons {
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        @include centerflex();
         gap: 25px;
         padding-right: 41px;
     }
     .brand {
-        background-color: #F1E4E6;
-        display: flex;
+        background-color: $colorPinkBackground;
+        @include centerflex();
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-content: stretch;
-        align-items: center;
         gap: 16px;
     }
     .brand_man_img {
         width: 50%;
     }
     .brand_text {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 45px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: Lato;
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
@@ -799,7 +785,7 @@ body {
         gap: 19.9px;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         max-height: 341px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 287px);
@@ -818,45 +804,41 @@ body {
         padding-left: 32px;
     }
     .header_menu_buttons {
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        @include centerflex();
         gap: 25px;
         padding-right: 41px;
     }
     .brand {
-        background-color: #F1E4E6;
-        display: flex;
+        background-color: $colorPinkBackground;
+        @include centerflex();
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-content: stretch;
-        align-items: center;
         gap: 16px;
     }
     .brand_man_img {
         width: 50%;
     }
     .brand_text {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 44px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 26px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: Lato;
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 26px;
         font-style: normal;
         font-weight: 700;
@@ -872,14 +854,13 @@ body {
     .browse_button {
         padding-top: 40px;
         padding-bottom: 40px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         max-height: 341px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 263px);
@@ -892,51 +873,46 @@ body {
         padding-right: calc(50% - 393px);
     }
     .header__left {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 41px;
         padding-left: 32px;
     }
     .header_menu_buttons {
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        @include centerflex();
         gap: 25px;
         padding-right: 41px;
     }
     .brand {
-        background-color: #F1E4E6;
-        display: flex;
+        background-color: $colorPinkBackground;
+        @include centerflex();
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-content: stretch;
-        align-items: center;
         gap: 16px;
     }
     .brand_man_img {
         width: 50%;
     }
     .brand_text {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 44px;
         font-style: normal;
         font-weight: 900;
         line-height: normal;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: Lato;
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: Lato;
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -952,14 +928,13 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         max-height: 341px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 241px);
@@ -987,14 +962,13 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         max-height: 341px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 228px);
@@ -1022,14 +996,13 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         max-height: 341px;
         display: grid;
         grid-template-columns: repeat(auto-fit, 220px);
@@ -1057,28 +1030,25 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .feature {
-        background-color: #222224;
+        background-color: $colorBlackTextMain;
         min-height: 610px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
         flex-wrap: nowrap;
         align-content: stretch;
         justify-content: flex-start;
-        align-items: center;
     }
     .feature_item {
         max-height: 134px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
         gap: 0px;
         padding-top: 35px;
         padding-bottom: 0px;
@@ -1092,18 +1062,14 @@ body {
     }
     .bottom {
         padding-top: 64px;
-        display: flex;
+        @include centerflex();
         align-items: center;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        flex-wrap: nowrap;
         justify-content: flex-start;
         gap: 48px;
     }
 }
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 @media (max-width: 692px) {
     .center {
@@ -1118,28 +1084,25 @@ body {
     }
     .offer {
         padding-top: 65px;
-        display: flex;
+        @include centerflex();
         gap: 35px;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
     }
     .offer_item {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 450px;
     }
     .offer_item_big {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 450px;
     }
     .product {
@@ -1151,23 +1114,21 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .copyright {
-        background: #222224;
-        display: flex;
+        background: $colorBlackTextMain;
+        @include centerflex();
         min-height: 79px;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
     .copyright_text {
-        color: #FBFBFB;
-        font-family: "Lato";
+        color: $colorWhiteMain;
+        font-family: $fontLato;
         font-size: 10px;
         font-style: normal;
         font-weight: 100;
@@ -1200,8 +1161,8 @@ body {
         padding-left: 4px;
     }
     .brand_text {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 42px;
         font-style: normal;
         font-weight: 900;
@@ -1210,16 +1171,16 @@ body {
         min-height: 80px;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
         line-height: 38px;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: "Lato";
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -1230,28 +1191,25 @@ body {
     }
     .offer {
         padding-top: 65px;
-        display: flex;
+        @include centerflex();
         gap: 34px;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
     }
     .offer_item {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 380px;
     }
     .offer_item_big {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 380px;
     }
     .product {
@@ -1263,23 +1221,21 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
     .copyright {
-        background: #222224;
-        display: flex;
+        background: $colorBlackTextMain;
+        @include centerflex();
         min-height: 143px;
         flex-direction: column-reverse;
         justify-content: space-around;
-        align-items: center;
     }
     .copyright_text {
-        color: #FBFBFB;
-        font-family: "Lato";
+        color: $colorWhiteMain;
+        font-family: $fontLato;
         font-size: 10px;
         font-style: normal;
         font-weight: 100;
@@ -1301,8 +1257,7 @@ body {
         min-height: 74px;
     }
     .header__left {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 41px;
         padding-left: 16px;
     }
@@ -1319,8 +1274,8 @@ body {
         max-height: 66px;
     }
     .brand_text {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 38px;
         font-style: normal;
         font-weight: 900;
@@ -1329,16 +1284,16 @@ body {
         min-height: 80px;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: 38px;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: "Lato";
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -1349,28 +1304,25 @@ body {
     }
     .offer {
         padding-top: 65px;
-        display: flex;
+        @include centerflex();
         gap: 33px;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
     }
     .offer_item {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 360px;
     }
     .offer_item_big {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 360px;
     }
     .product {
@@ -1382,9 +1334,8 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
@@ -1399,8 +1350,7 @@ body {
         min-height: 74px;
     }
     .header__left {
-        display: flex;
-        align-items: center;
+        @include centerflex();
         gap: 41px;
         padding-left: 16px;
     }
@@ -1417,8 +1367,8 @@ body {
         max-height: 66px;
     }
     .brand_text {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 38px;
         font-style: normal;
         font-weight: 900;
@@ -1427,16 +1377,16 @@ body {
         min-height: 80px;
     }
     .brand_text_luxerious {
-        color: #222;
-        font-family: "Lato";
+        color: $colorBlackTextMain;
+        font-family: $fontLato;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: 38px;
     }
     .brand_text_fashion {
-        color: #F16D7F;
-        font-family: "Lato";
+        color: $colorPinkMain;
+        font-family: $fontLato;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -1447,29 +1397,26 @@ body {
     }
     .offer {
         padding-top: 65px;
-        display: flex;
+        @include centerflex();
         gap: 32px;
         flex-direction: column;
         flex-wrap: wrap;
-        align-items: center;
     }
     .offer_item {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 343px;
         min-height: 248px;
     }
     .offer_item_big {
         position: relative;
-        background: rgba(33, 22, 22, 0.7);
-        display: flex;
+        background: $colorItemBackground;
+        @include centerflex();
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         min-width: 359px;
         min-height: 111px;
     }
@@ -1482,9 +1429,8 @@ body {
     .browse_button {
         padding-top: 32px;
         padding-bottom: 32px;
-        display: flex;
+        @include centerflex();
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
     }
